@@ -4,7 +4,6 @@ import {
   MenuItem,
   Select,
   Toolbar,
-  Typography,
 } from "@material-ui/core";
 import {
   createTheme,

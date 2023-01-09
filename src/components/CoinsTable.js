@@ -87,7 +87,7 @@ export default function CoinsTable() {
      <ThemeProvider theme={darkTheme}>
       <Container style={{ textAlign: "center"}}>
         <Typography
-          variant="h3"
+          variant="h4"
           style={{ margin: 18, fontFamily: "Montserrat", color: "#ff7500" }}
         >
           Cryptocurrency Prices by Market Cap

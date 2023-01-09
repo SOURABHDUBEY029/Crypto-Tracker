@@ -4,6 +4,8 @@ import {
   MenuItem,
   Select,
   Toolbar,
+  Box,
+  Typography,
 } from "@material-ui/core";
 import {
   createTheme,
@@ -14,13 +16,9 @@ import { useHistory } from "react-router-dom";
 import { CryptoState } from "../CryptoContext";
 
 const useStyles = makeStyles((theme) => ({
-  logo: {
-    maxWidth: 48,
-  },
-
   title: {
     flex: 1,
-    color: "white",
+    color: "gold",
     fontFamily: "Montserrat",
     fontWeight: "bold",
     cursor: "pointer",
@@ -32,7 +30,7 @@ const darkTheme = createTheme({
     primary: {
       main: "#fff",
     },
-    type: "light",
+    type: "dark",
   },
 });
 
@@ -47,18 +45,24 @@ function Header() {
       <AppBar color="transparent" position="static">
         <Container>
           <Toolbar>
-            {/* <Typography
+
+             <Box
+            component="img"
+            sx={{
+            height: 55,
+            }}
+            alt="logo"
+            src="logo.png"
+            onClick={() => history.push(`/`)}
+        />
+
+            <Typography
               onClick={() => history.push(`/`)}
               variant="h6"
               className={classes.title}
             >
-              Crypto Tracker
-            </Typography> */}
 
-            <img src="logo.png" alt="logo" className={classes.logo}
-                 onClick={() => history.push(`/`)}
-            />
-
+            </Typography>
             {/* <Button color="inherit">Login</Button> */}
             <Select
               variant="outlined"
